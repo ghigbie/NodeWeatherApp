@@ -25,7 +25,11 @@ axios.get(geocodeUrl).then((response) => {
     var lng = response.data.results[0].geometry.location.lng;
     var apiKey = "9f6325a874ba4e46242d3e5e3c349a27";
     var ulrDarkSky = `https://api.darksky.net/forecast/${apiKey}/${lat},${lng}`;
-    console.log(response.data);
+    console.log(response.data.results[0].formatted_address);
+    return axios.get(urlDarkSky);
+}).then((response) => {
+    var temperature = response.data.currently.temperature;
+    var apparentTempurature = response.data.currently.apparentTemperature;
 }).catch((e) => {
     if(e.code === "ENOTFOUND"){
         console.log("Unable to connect to API servers.")
