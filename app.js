@@ -29,7 +29,8 @@ axios.get(geocodeUrl).then((response) => {
     return axios.get(urlDarkSky);
 }).then((response) => {
     var temperature = response.data.currently.temperature;
-    var apparentTempurature = response.data.currently.apparentTemperature;
+    var apparentTemperature = response.data.currently.apparentTemperature;
+    console.log(`*** It is currently ${temperature}, and it feels like ${apparentTemperature}. ***`)
 }).catch((e) => {
     if(e.code === "ENOTFOUND"){
         console.log("Unable to connect to API servers.")
