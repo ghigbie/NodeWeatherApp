@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ghigbie/NodeWeatherApp/issues"
   },
-  "homepage": "https://github.com/ghigbie/NodeWeatherApp#readme"
+  "homepage": "https://github.com/ghigbie/NodeWeatherApp#readme",
+  "dependencies": {
+    "yargs": "^7.0.2"
+  }
 }
