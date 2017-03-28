@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ghigbie/NodeWeatherApp#readme",
   "dependencies": {
+    "axios": "^0.13.1",
     "yargs": "^7.0.2"
   }
 }
