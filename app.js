@@ -13,3 +13,10 @@ const argv = yargs
     .help()
     .alias("help", "h")
     .argv;
+
+var encodedAddress = encodeURIComponent(argv.address);
+var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
+
+axios.get(geocodeUrl).then((response) => {
+    console.log(response.data);
+});
