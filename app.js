@@ -19,4 +19,6 @@ var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${en
 
 axios.get(geocodeUrl).then((response) => {
     console.log(response.data);
+}).catch((err) => {
+    console.log(err);
 });
