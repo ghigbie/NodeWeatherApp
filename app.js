@@ -21,6 +21,10 @@ axios.get(geocodeUrl).then((response) => {
     if(response.data.status === "ZERO_RESULTS"){
         throw new Error("Unable to find that address");
     }
+    var lat;
+    var lng;
+    var apiKey = "9f6325a874ba4e46242d3e5e3c349a27";
+    var ulrDarkSky = `https://api.darksky.net/forecast/${apiKey}/${lat},${lng}`;
     console.log(response.data);
 }).catch((e) => {
     if(e.code === "ENOTFOUND"){
